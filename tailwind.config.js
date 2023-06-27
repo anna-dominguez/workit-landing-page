@@ -6,11 +6,32 @@ module.exports = {
     './src/app/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
+    fontSize: {
+      heandingL: ['80px', '80px'],
+      headingM: ['56px', '64px'],
+      headingS: ['50px', '50px'],
+      headingXS: ['32px', '40px'],
+      headingXXS: ['28px', '36px'],
+      bodyM: ['20px', '36px'],
+      body: ['18px', '32px'],
+      bodyS: ['16px', '32px'],
+    },
+    colors: {
+      darkPurple: '#24053E',
+      davysGrey: '#584D62',
+      eucalyptus: '#44FFA1',
+      ghostWhite: '#FCF8FF',
+      white: '#FFFFFF',
+    },
     extend: {
       backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        pattern1: "url('../public/images/bg-pattern-1.svg)",
+        pattern2: "url('../public/images/bg-pattern-2.svg)",
+        pattern3: "url('../public/images/bg-pattern-3.svg)",
+      },
+      fontFamily: {
+        body: 'Manrope',
+        title: 'Fraunces\\ 144pt',
       },
     },
   },

@@ -2,26 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@layer base {
+  h1,
+  h2,
+  h3 {
+    @apply font-title font-semibold;
   }
-}
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  p {
+    @apply font-body text-bodyS lg:text-body;
+  }
+  header {
+    @apply bg-[url(https://file.rendit.io/n/EUjG88jtC4ZmQj32GLTW.svg)] md:bg-[url(https://file.rendit.io/n/7c7hitn15w0vlqJHtojF.svg)] lg:bg-[url(https://file.rendit.io/n/tVoFdvHHLx0fHwKWIMPb.svg)] bg-cover bg-origin-border bg-no-repeat flex flex-col relative h-[482px] md:h-[540px];
+  }
+  main {
+    @apply bg-[url(https://file.rendit.io/n/zdTbSqXIByOGP7Z6XAvD.svg)] md:bg-[url(https://file.rendit.io/n/54uTQ25mHacJg4AwyClu.svg)] lg:bg-[url(https://file.rendit.io/n/0WW5U12WJElkmn6wPvdU.svg)] bg-cover bg-origin-border bg-no-repeat flex flex-col justify-end gap-4 relative h-fit items-center pt-16 md:pt-52 lg:pt-64 pb-2 md:pb-24 lg:pb-44;
+  }
+  footer {
+    @apply grid relative px-4 md:px-5 lg:px-[165px] justify-items-center justify-center md:justify-end mt-[328px] md:mt-[251px] lg:mt-[283px] mb-16;
+  }
+
+  button {
+    @apply bg-eucalyptus text-darkPurple font-bold
+                        -tracking-[0.16px] px-6 py-3
+                        border-solid border-2 border-eucalyptus hover:bg-darkPurple hover:text-eucalyptus;
+  }
 }
